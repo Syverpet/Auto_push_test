@@ -54,20 +54,19 @@ from git import Repo
 
 
 def git_push():
-    try:
-        repo = Repo(PATH_OF_GIT_REPO)
-        print('1', repo)
-        repo.git.add(update=True)
-        print('2')
-        repo.index.commit(COMMIT_MESSAGE)
-        print('3')
-        origin = repo.remote(name='origin')
-        print('4')
-        assert origin.exists()
+    
+    repo = Repo(PATH_OF_GIT_REPO)
+    print('1', repo)
+    repo.git.add(update=True)
+    print('2')
+    repo.index.commit(COMMIT_MESSAGE)
+    print('3')
+    origin = repo.remote(name='origin')
+    print('4')
+    assert origin.exists()
 
-        origin.push("--force")
-    except:
-        print('Some error occured while pushing the code')    
+    origin.push("--force")
+    
 
 
 
