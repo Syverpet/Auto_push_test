@@ -65,7 +65,7 @@ def git_push():
     print('4')
     assert origin.exists()
 
-    origin.push("--force")
+    origin.push("master")
     
 
 
