@@ -61,9 +61,9 @@ def git_push():
         print('2')
         repo.index.commit(COMMIT_MESSAGE)
         print('3')
-        origin = repo.remote(name='master')
+        origin = repo.remote(name='origin')
         print('4')
-        origin.push()
+        origin.push().raise_if_error()
     except:
         print('Some error occured while pushing the code')    
 
