@@ -64,7 +64,8 @@ def git_push():
         origin = repo.remote(name='origin')
         print('4')
         assert origin.exists()
-        origin.push().raise_if_error()
+
+        origin.push("--force")
     except:
         print('Some error occured while pushing the code')    
 
