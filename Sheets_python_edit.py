@@ -56,7 +56,7 @@ from git import Repo
 def git_push():
     try:
         repo = Repo(PATH_OF_GIT_REPO)
-        print('1')
+        print('1', repo)
         repo.git.add(update=True)
         print('2')
         repo.index.commit(COMMIT_MESSAGE)
