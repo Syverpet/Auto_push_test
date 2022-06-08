@@ -154,8 +154,4 @@ else:
     print('NOT the same')
 
 
-try:
-    print('git_push')
-    git_push()
-except:
-    print('NO_git_push')
+git_push()
